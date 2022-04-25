@@ -39,4 +39,4 @@ jobs:
       - name: Run a cxFlow container
         run: |
           docker pull checkmarx/cx-flow
-          echo test, and deploy your project.
+          docker run checkmarx/cx-flow --scan --cx-project=KAKA
