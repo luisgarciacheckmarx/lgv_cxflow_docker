@@ -40,6 +40,8 @@ jobs:
           pwd
           ls -l
           env | grep CHECKMARX_BASE_URL
+          KKENV=<(env)
+          env | grep KKENV
 
       # Run a cxFlow container
       - name: Run a cxFlow container
