@@ -34,3 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Run a cxFlow container
+      - name: Run a cxFlow container
+        run: |
+          docker pull checkmarx/cx-flow
+          echo test, and deploy your project.
