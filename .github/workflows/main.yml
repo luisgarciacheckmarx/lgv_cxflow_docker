@@ -39,4 +39,4 @@ jobs:
       - name: Run a cxFlow container
         run: |
           docker pull checkmarx/cx-flow
-          docker run checkmarx/cx-flow --scan --cx-project=KAKA -app="KAKA_APP"
+          docker run checkmarx/cx-flow --spring.profiles.active=sast --scan --cx-project=KAKA -app="KAKA_APP"
