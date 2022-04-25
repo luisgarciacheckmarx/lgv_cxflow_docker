@@ -47,4 +47,4 @@ jobs:
       - name: Run a cxFlow container
         run: |
           docker pull checkmarx/cx-flow
-          docker run checkmarx/cx-flow --env-file=<(env) --spring.profiles.active=sast --scan --cx-project=KAKA --app=KAKA_APP --f=. 
+          docker run checkmarx/cx-flow --env-file=CHECKMARX_BASE_URL=http://kk.com --spring.profiles.active=sast --scan --cx-project=KAKA --app=KAKA_APP --f=. 
