@@ -1,6 +1,6 @@
 cxflow:
   #bug-tracker: GitHub
-  bug-tracker: GitHub
+  bug-tracker: GITHUBPULL
   bug-tracker-impl:
     - GitHub
     - Jira
