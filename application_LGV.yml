@@ -15,7 +15,7 @@ cxflow:
   #  - Reflected_XSS_All_Clients
   filter-cwe:
   filter-status:
-  #mitre-url: https://cwe.mitre.org/data/definitions/%s.html
+  #mitre-url: https://cwe.mitre.org/data/definitions/%s.html 
   #wiki-url: https://custodela.atlassian.net/wiki/spaces/AS/pages/79462432/Remediation+Guidance
   codebash-url: https://checkmarx-demo.codebashing.com/courses/
   thresholds:
