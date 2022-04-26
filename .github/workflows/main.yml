@@ -22,6 +22,7 @@ jobs:
     env:
       Greeting: Hello
       CHECKMARX_BASE_URL: "http://kk.com"
+      LGV_KK: "{{ secrets.LGV_GH_API_TOKEN }}"
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -41,7 +42,7 @@ jobs:
           ls -l
           env | grep CHECKMARX_BASE_URL
           #KKENV=<(env)
-          #env | grep KKENV
+          env | grep LGV_KK
 
       # Run a cxFlow container
       - name: Run a cxFlow container
@@ -54,6 +55,9 @@ jobs:
                --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }} \
                --cx-flow.filterSeverity --cx-flow.filterCategory \
                --cx-flow.thresholds.high=0 --cx-flow.thresholds.medium=1 \
-               --github.url=http://jeje.com  --github.apiurl=http://jeje.com  --github.api-url=http://je-je.com
+               --github.token=${{ secrets.LGV_GH_API_TOKEN }}
+               
+          # --github.url=http://jeje.com  --github.apiurl=http://jeje.com  --github.api-url=http://je-je.com \
+               
           #docker run -v $(pwd)/application_LGV.yml:/app/application_LGV.yml checkmarx/cx-flow --spring.config.location=/app/application_LGV.yml --spring.profiles.active=sast --scan --cx-project=KAKA --app=KAKA_APP --f=. 
           #docker run checkmarx/cx-flow --spring.profiles.active=sast --scan --cx-project=KAKA --app=KAKA_APP --f=. 
