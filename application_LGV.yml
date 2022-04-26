@@ -28,7 +28,7 @@ checkmarx:
   client-id: resource_owner_client
   client-secret: 014DF517-39D1-4453-B7B3-9930C563627C
   scope: access_control_api sast_rest_api
-  base-url: http://ec2amaz-3tsivek/
+  base-url: http://febb-3-83-175-182.ngrok.io
   team: /CxServer
   url: ${checkmarx.base-url}/cxrestapi
   multi-tenant: false
