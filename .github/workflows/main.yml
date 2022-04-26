@@ -47,5 +47,5 @@ jobs:
       - name: Run a cxFlow container
         run: |
           docker pull checkmarx/cx-flow
-          docker run -v $(pwd)/applicationLGV.yml:/app/application_LGV.yml checkmarx/cx-flow --spring.config.location=/app/application_LGV.yml --spring.profiles.active=sast --scan --cx-project=KAKA --app=KAKA_APP --f=. 
+          docker run -v $(pwd)/application_LGV.yml:/app/application_LGV.yml checkmarx/cx-flow --spring.config.location=/app/application_LGV.yml --spring.profiles.active=sast --scan --cx-project=KAKA --app=KAKA_APP --f=. 
           #docker run checkmarx/cx-flow --spring.profiles.active=sast --scan --cx-project=KAKA --app=KAKA_APP --f=. 
