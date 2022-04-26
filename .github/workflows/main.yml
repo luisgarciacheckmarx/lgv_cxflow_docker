@@ -55,7 +55,9 @@ jobs:
                --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }} \
                --cx-flow.thresholds.high=0 --cx-flow.thresholds.medium=1 \
                --github.token=${{ secrets.LGV_GH_API_TOKEN }} \
-               --logging.level.com.checkmarx=debug
+               --logging.level.com.checkmarx=debug \
+               --repo-url="https://github.com/luisgarciacheckmarx/lgv_cxflow_docker"
+               
           #--cx-flow.filterSeverity --cx-flow.filterCategory \     
           # --github.url=http://jeje.com  --github.apiurl=http://jeje.com  --github.api-url=http://je-je.com \
                
