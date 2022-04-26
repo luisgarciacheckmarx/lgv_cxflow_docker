@@ -54,6 +54,6 @@ jobs:
                --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }} \
                --cx-flow.filterSeverity --cx-flow.filterCategory \
                --cx-flow.thresholds.high=0 --cx-flow.thresholds.medium=1 \
-               --github.url=http:jeje.com
+               --github.url=http://jeje.com  --github.apiurl=http://jeje.com  --github.api-url=http://je-je.com
           #docker run -v $(pwd)/application_LGV.yml:/app/application_LGV.yml checkmarx/cx-flow --spring.config.location=/app/application_LGV.yml --spring.profiles.active=sast --scan --cx-project=KAKA --app=KAKA_APP --f=. 
           #docker run checkmarx/cx-flow --spring.profiles.active=sast --scan --cx-project=KAKA --app=KAKA_APP --f=. 
