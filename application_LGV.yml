@@ -1,3 +1,26 @@
+cxflow:
+  #bug-tracker: GitHub
+  bug-tracker: GitHub
+  bug-tracker-impl:
+    - GitHub
+    - Jira
+  branches:
+    - main
+    - branch1
+  filter-severity:
+  #  - High
+  filter-category:
+  #  - SQL_Injection
+  #  - Stored_XSS
+  #  - Reflected_XSS_All_Clients
+  filter-cwe:
+  filter-status:
+  #mitre-url: https://cwe.mitre.org/data/definitions/%s.html
+  #wiki-url: https://custodela.atlassian.net/wiki/spaces/AS/pages/79462432/Remediation+Guidance
+  codebash-url: https://checkmarx-demo.codebashing.com/courses/
+  thresholds:
+    high: 0
+    
 checkmarx:
   version: 9.0
   username: admin
@@ -14,3 +37,12 @@ checkmarx:
   sdk-url: ${checkmarx.base-url}/cxwebinterface/SDK/CxSDKWebService.asmx
   portal-wsdl: ${checkmarx.base-url}/Portal/CxWebService.asmx?wsdl
   sdk-wsdl: ${checkmarx.base-url}/SDK/CxSDKWebService.asmx?wsdl
+  
+github:
+  webhook-token: 12345
+  token: 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
+  url: https://github.com
+  api-url: https://api.github.com/repos/
+  false-positive-label: false-positive
+  block-merge: true
+  error-merge: true
